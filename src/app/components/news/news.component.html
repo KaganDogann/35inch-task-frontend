@@ -1,0 +1,25 @@
+<div routerLink="/news/{{item.id}}"  *ngFor="let item of news" class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.title}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- <button type="button" class="btn btn-outline-success" routerLink="/news/{{news.Id}}" >Araba Detay</button> -->
+  </div>
+</div>
+
+<nav *ngIf="true"  class="col-md-4 mx-auto" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+
+    <li (click)="getNews(index)" *ngFor="let a of fakeArray; let index= index" class="page-item"><a class="page-link" href="#">{{index+1}}</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

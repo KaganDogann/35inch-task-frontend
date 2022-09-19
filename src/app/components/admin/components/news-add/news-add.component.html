@@ -1,0 +1,40 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Haber Ekle</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="newsAddForm">
+          <div class="mb-3">
+            <label for="newsName">Haber adı</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="newsName"
+                formControlName="newsName"
+                class="form-control"
+                placeholder="Haber adı"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="newsDescription">Haber tanımı</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="newsDescription"
+                formControlName="newsDescription"
+                class="form-control"
+                placeholder="Haber tanımı"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+      </div>
+    </div>
+  </div>
+</div>
